@@ -1,0 +1,43 @@
+body {
+    background: #e1eaf5;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    }
+.contenedor {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #89b6ff;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    }
+.output {
+    margin-bottom: 20px;
+    }
+#claveGenerada {
+    width: 70%;
+    padding: 8px;
+    }
+button {
+    background-color: #497de9;
+    border: none;
+    padding: 10px;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    }
+button:hover {
+    background-color: #3c6ed0;
+    }
+    
+.config {
+    text-align: left;
+    margin: 20px 0;
+    }

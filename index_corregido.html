@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clave Segura</title>
+    <link rel="stylesheet" href="style_corregido.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z' fill='%23000000'/></svg>">
+</head>
+<body>
+    <main class="contenedor">
+        <h2>Clave Segura 🔐</h2>
+        <section class="output">
+            <input type="text" id="claveGenerada" readonly>
+            <button id="copiar">Copiar</button>
+        </section>
+        <section class="config">
+            <label for="tam">Tamaño: <span id="tamValor">10</span></label>
+            <input type="range" id="tam" min="6" max="25" value="10">
+            <label><input type="checkbox" id="mayus"> Incluir MAYÚS</label>
+            <label><input type="checkbox" id="num" checked> Números</label>
+            <label><input type="checkbox" id="simbolos"> Símbolos</label>
+        </section>
+        <button id="generar">Crear Contraseña</button>
+        <div id="mensaje-copiado" class="mensaje-oculto">¡Copiado!</div>
+        
+        <!-- Mejora: Indicador de fortaleza de contraseña -->
+        <div class="fortaleza-contenedor">
+            <p>Fortaleza: <span id="nivel-fortaleza">Media</span></p>
+            <div class="barra-fortaleza">
+                <div id="medidor-fortaleza" class="medidor-medio"></div>
+            </div>
+        </div>
+        
+        <!-- Mejora: Historial de contraseñas generadas -->
+        <div class="historial-contenedor">
+            <h3>Historial reciente</h3>
+            <ul id="historial-claves"></ul>
+        </div>
+    </main>
+    <script src="script_corregido.js"></script>
+</body>
+</html>
